@@ -15,7 +15,7 @@
         <header class="site-header">
 
             <div class="site-branding">
-                <h1 class="site-title"><a href="/">{{site.title}}!</a></h1>
+                <h1 class="site-title"><a href="{{ site.baseurl }}/">{{site.title}}!</a></h1>
                 <p>{{ site.description }}</p>
             </div>
 
@@ -23,7 +23,7 @@
                 <ul>
                     {% for page in site.pages %}
                     {% if page.title %}
-                    <li class="page-title-{{ page.title | slugify }}"><a href="{{ page.url }}">{{ page.title }}</a></li>
+                    <li class="page-title-{{ page.title | slugify }}"><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></li>
                     {% endif %}
                     {% endfor %}
                 </ul>
