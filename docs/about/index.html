@@ -5,50 +5,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Advanced</title>
-    <link rel="stylesheet" href="/su-jekyll-zsite/css/fontawesome/css/all.css">
-    <link rel="stylesheet" href="/su-jekyll-zsite/css/styles.css">
+    <link rel="stylesheet" href="/css/fontawesome/css/all.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <script>
+        window.addEventListener('load', (event) => {
+            document.querySelector('body').classList.add('loaded');
+        })
+    </script>
 </head>
 
-<body>
+<body class="page-about">
     <div class="site">
 
         <header class="site-header">
 
             <div class="site-branding">
-                <h1 class="site-title"><a href="/su-jekyll-zsite/">CSS Advanced!</a></h1>
+                <h1 class="site-title"><a href="/">CSS Advanced!</a></h1>
                 <p>Vse Taia</p>
             </div>
 
             <nav class="nav">
-                <ul>
-                    
-                    
-                    
-                    
-                    <li class="page-title-about"><a href="/su-jekyll-zsite/about/">About</a></li>
-                    
-                    
-                    
-                    <li class="page-title-contacts"><a href="/su-jekyll-zsite/contacts/">Contacts</a></li>
-                    
-                    
-                    
-                    
-                    
-                    
-                </ul>
-            </nav>
+    <ul>
+
+        
+
+        
+        
+        
+        
+        
+        
+        <li
+            class="page-title-home">
+            <a href="/">Home</a>
+        </li>
+        
+        
+        
+        <li
+            class="page-title-about current-page ">
+            <a href="/about/">About</a>
+        </li>
+        
+        
+        
+        <li
+            class="page-title-services">
+            <a href="/services/">Services</a>
+        </li>
+        
+        
+        
+        <li
+            class="page-title-contacts">
+            <a href="/contacts/">Contacts</a>
+        </li>
+        
+        
+    </ul>
+</nav>
 
         </header>
 
         <main class="site-main">
             <h2>About Page</h2>
 
-            <img src="/su-jekyll-zsite/images/banner.webp" alt="banner">
+
+            <img src="/images/banner_About.webp" alt="banner">
         </main>
 
         <footer class="site-footer">
-            <p>CSS Advanced &copy; All Rights Reserved 2021-04-22 17:03:11 +0300</p>
+            <p>CSS Advanced &copy; All Rights Reserved 2021-04-23 19:38:46 +0300</p>
         </footer>
 
     </div>
