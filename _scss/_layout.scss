@@ -9,13 +9,15 @@ body {
 
 .site-header,
 .site-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include bp(desktop) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 }
 
 img {
     border-radius: 0.3em;
-    box-shadow: 0 0 1em 0 rgba(0,0,0,0.5);
+    box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.5);
     min-height: 90vh;
 }

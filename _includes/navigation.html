@@ -1,15 +1,45 @@
+<label for="nav-toggle" class="nav-toggle-label">Menu</label>
+
 <nav class="nav">
     <ul>
 
         {% assign navigation_pages = site.pages | sort:"order" %}
 
         {% for current_page in navigation_pages %}
-        {% if current_page.title %}
-        <li
-            class="page-title-{{ current_page.title | slugify }}{% if current_page.url == page.url %} current-page {% endif %}">
-            <a href="{{ site.baseurl }}{{ current_page.url }}">{{ current_page.title }}</a>
-        </li>
-        {% endif %}
+            {% if current_page.title %}
+            <li
+                class="page-title-{{ current_page.title | slugify }}{% if current_page.url == page.url %} current-page {% endif %}">
+                <a href="{{ site.baseurl }}{{ current_page.url }}">{{ current_page.title }}</a>
+            </li>
+            {% endif %}
         {% endfor %}
     </ul>
 </nav>
+
+
+
+<!-- 
+<nav class="nav">
+    <ul>
+
+        {% assign navigation_pages = site.pages | sort:"order" %}
+
+        {% for item in site.navigation %}
+            {% if current_page.title %}
+            <li class="page-title-{{ current_page.title | slugify }}{% if current_page.url == page.url %} current-page {% endif %}">
+                <a href="{{ site.baseurl }}{{ current_page.url }}">{{ current_page.title }}</a>
+
+                {% if item.items %}
+                <ul>
+                    {% for subitem in item.items %}
+                        <li class="page-title-{{ current_page.title | slugify }}{% if current_page.url == page.url %} current-page {% endif %}">
+                            <a href="{{ site.baseurl }}{{ subitem.url }}">{{ subitem.text }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+            </li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+</nav> -->

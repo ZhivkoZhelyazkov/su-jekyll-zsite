@@ -24,3 +24,22 @@ exclude:
   - vendor/gems/
   - vendor/ruby/
   - docs
+
+# navigation:
+#   - url: /home/
+#     text: Home
+#   - url: /about/
+#     text: About
+#   - url: /services/
+#     text: Services
+#     items:
+#       - url: /service_1/
+#         text: Service_1
+#       - url: /service_2/
+#         text: Service_2
+#       - url: /service_3/
+#         text: Service_3
+#       - url: /service_4/
+#         text: Service_4
+#   - url: /contacts/
+#     text: Contacts

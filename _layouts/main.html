@@ -4,7 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{site.title}}</title>
+    <title>
+        {% if page.title != 'Home' %}
+            {{ page.title }} | {{ site.title }}
+        {% else %}
+            {{ site.title }}
+        {% endif %}
+    </title>
     <!-- <link rel="stylesheet" href="{{ site.baseurl }}/css/fontawesome/css/all.css"> -->
     <link rel="stylesheet" href="{{ site.baseurl }}/css/styles.css">
     <script>
@@ -15,6 +21,8 @@
 </head>
 
 <body class="page-{{ page.title | slugify }}">
+
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
     <div class="site">
 
         <header class="site-header">
@@ -31,7 +39,7 @@
         <main class="site-main">
             {{content}}
 
-            <img src="{{ site.baseurl }}/images/banner_{{ page.title }}.webp" alt="banner">
+            <img src="{{ site.baseurl }}/images/banner_{{ page.title | slugify }}.webp" alt="banner">
         </main>
 
         <footer class="site-footer">
