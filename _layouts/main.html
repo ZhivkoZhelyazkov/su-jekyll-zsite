@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
         {% if page.title != 'Home' %}
-            {{ page.title }} | {{ site.title }}
+        {{ page.title }} | {{ site.title }}
         {% else %}
-            {{ site.title }}
+        {{ site.title }}
         {% endif %}
     </title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <!-- <link rel="stylesheet" href="{{ site.baseurl }}/css/fontawesome/css/all.css"> -->
     <link rel="stylesheet" href="{{ site.baseurl }}/css/styles.css">
     <script>
@@ -22,28 +23,74 @@
 
 <body class="page-{{ page.title | slugify }}">
 
-    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <input type="checkbox" id="site-nav-toggle" class="site-nav-toggle">
     <div class="site">
 
         <header class="site-header">
+            <div class="site-wrapper">
+                <div class="site-branding">
+                    <h1 class="site-title"><a href="{{ site.baseurl }}/">{{site.title}}!</a></h1>
+                    <p>{{ site.description }}</p>
+                </div>
 
-            <div class="site-branding">
-                <h1 class="site-title"><a href="{{ site.baseurl }}/">{{site.title}}!</a></h1>
-                <p>{{ site.description }}</p>
+                {% include navigation.html %}
             </div>
-
-            {% include navigation.html %}
-
         </header>
 
-        <main class="site-main">
-            {{content}}
+        <section class="site-media"
+            style="background-image: url('https://images.unsplash.com/photo-1541178735493-479c1a27ed24?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=80');">
 
-            <img src="{{ site.baseurl }}/images/banner_{{ page.title | slugify }}.webp" alt="banner">
+            <div class="site-wrapper">
+                <h2>A sleek, modern Jekyll theme for personal websites</h2>
+                <p>Personal is the perfect theme for developers, designers and other creatives.</p>
+                <ul class="social">
+                    <li>
+                        <a href="#">F</a>
+                    </li>
+                    <li>
+                        <a href="#">T</a>
+                    </li>
+                    <li>
+                        <a href="#">L</a>
+                    </li>
+                    <li>
+                        <a href="#">I</a>
+                    </li>
+                </ul>
+            </div>
+
+        </section>
+
+        <main class="site-content">
+            <div class="site-wrapper">
+                {{content}}
+                <!-- <img src="{{ site.baseurl }}/images/banner_{{ page.title | slugify }}.webp" alt="banner"> -->
+            </div>
         </main>
 
         <footer class="site-footer">
-            <p>{{site.title}} &copy; All Rights Reserved {{ site.time }}</p>
+            <div class="site-wrapper">
+                <div class="info">
+                    <p>{{site.title}}</p>
+                    <p>A sleek, modern Jekyll theme for personal websites.</p>
+                    <p>&copy; All Rights Reserved - {{ site.time }}</p>
+                </div>
+
+                <ul class="social">
+                    <li>
+                        <a href="#">F</a>
+                    </li>
+                    <li>
+                        <a href="#">T</a>
+                    </li>
+                    <li>
+                        <a href="#">L</a>
+                    </li>
+                    <li>
+                        <a href="#">I</a>
+                    </li>
+                </ul>
+            </div>
         </footer>
 
     </div>

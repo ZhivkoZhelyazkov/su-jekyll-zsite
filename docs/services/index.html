@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
         
-            Services | CSS Advanced
+        Services | CSS Advanced
         
     </title>
-    <!-- <link rel="stylesheet" href="/su-jekyll-zsite/css/fontawesome/css/all.css"> -->
-    <link rel="stylesheet" href="/su-jekyll-zsite/css/styles.css">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <!-- <link rel="stylesheet" href="/css/fontawesome/css/all.css"> -->
+    <link rel="stylesheet" href="/css/styles.css">
     <script>
         window.addEventListener('load', (event) => {
             document.querySelector('body').classList.add('loaded');
@@ -20,19 +21,19 @@
 
 <body class="page-services">
 
-    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <input type="checkbox" id="site-nav-toggle" class="site-nav-toggle">
     <div class="site">
 
         <header class="site-header">
+            <div class="site-wrapper">
+                <div class="site-branding">
+                    <h1 class="site-title"><a href="/">CSS Advanced!</a></h1>
+                    <p>Vse Taia</p>
+                </div>
 
-            <div class="site-branding">
-                <h1 class="site-title"><a href="/su-jekyll-zsite/">CSS Advanced!</a></h1>
-                <p>Vse Taia</p>
-            </div>
+                <label for="site-nav-toggle" class="site-nav-toggle-label">Menu</label>
 
-            <label for="nav-toggle" class="nav-toggle-label">Menu</label>
-
-<nav class="nav">
+<nav class="site-nav">
     <ul>
 
         
@@ -45,28 +46,42 @@
             
             <li
                 class="page-title-home">
-                <a href="/su-jekyll-zsite/">Home</a>
+                <a href="/">Home</a>
             </li>
             
         
             
             <li
                 class="page-title-about">
-                <a href="/su-jekyll-zsite/about/">About</a>
+                <a href="/about/">About</a>
             </li>
             
         
             
             <li
                 class="page-title-services current-page ">
-                <a href="/su-jekyll-zsite/services/">Services</a>
+                <a href="/services/">Services</a>
             </li>
             
         
             
             <li
                 class="page-title-contacts">
-                <a href="/su-jekyll-zsite/contacts/">Contacts</a>
+                <a href="/contacts/">Contacts</a>
+            </li>
+            
+        
+            
+            <li
+                class="page-title-grid">
+                <a href="/grid/">Grid</a>
+            </li>
+            
+        
+            
+            <li
+                class="page-title-gallery">
+                <a href="/gallery/">Gallery</a>
             </li>
             
         
@@ -84,17 +99,63 @@
         
     </ul>
 </nav> -->
-
+            </div>
         </header>
 
-        <main class="site-main">
-            <h2>Services Page</h2>
+        <section class="site-media"
+            style="background-image: url('https://images.unsplash.com/photo-1541178735493-479c1a27ed24?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=80');">
 
-            <img src="/su-jekyll-zsite/images/banner_services.webp" alt="banner">
+            <div class="site-wrapper">
+                <h2>A sleek, modern Jekyll theme for personal websites</h2>
+                <p>Personal is the perfect theme for developers, designers and other creatives.</p>
+                <ul class="social">
+                    <li>
+                        <a href="#">F</a>
+                    </li>
+                    <li>
+                        <a href="#">T</a>
+                    </li>
+                    <li>
+                        <a href="#">L</a>
+                    </li>
+                    <li>
+                        <a href="#">I</a>
+                    </li>
+                </ul>
+            </div>
+
+        </section>
+
+        <main class="site-content">
+            <div class="site-wrapper">
+                
+                <!-- <img src="/images/banner_services.webp" alt="banner"> -->
+            </div>
         </main>
 
         <footer class="site-footer">
-            <p>CSS Advanced &copy; All Rights Reserved 2021-04-24 20:57:17 +0300</p>
+            <div class="site-wrapper">
+                <div class="info">
+                    <p>CSS Advanced</p>
+                    <p>A sleek, modern Jekyll theme for personal websites.</p>
+                    <p>&copy; All Rights Reserved - 2021-04-26 12:09:08 +0300</p>
+                </div>
+
+                <ul class="social">
+                    <li>
+                        <a href="#">F</a>
+                    </li>
+                    <li>
+                        <a href="#">T</a>
+                    </li>
+                    <li>
+                        <a href="#">L</a>
+                    </li>
+                    <li>
+                        <a href="#">I</a>
+                    </li>
+                </ul>
+            </div>
         </footer>
 
     </div>

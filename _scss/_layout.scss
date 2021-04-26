@@ -1,23 +1,22 @@
-body {
-    background: maroon;
+.site-wrapper {
+	max-width: 75rem;
+	margin: 0 auto;
 }
 
-.site {
-    max-width: var(--layout-width, 60em);
-    margin: 0 auto;
+.site-header {
+
 }
 
-.site-header,
+.site-media img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.site-content .site-wrapper {
+    
+}
+
 .site-footer {
-    @include bp(desktop) {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-}
 
-img {
-    border-radius: 0.3em;
-    box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.5);
-    min-height: 90vh;
 }

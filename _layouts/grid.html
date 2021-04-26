@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% if page.title != 'Home' %}
+            {{ page.title }} | {{ site.title }}
+        {% else %}
+            {{ site.title }}
+        {% endif %}
+    </title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <!-- <link rel="stylesheet" href="{{ site.baseurl }}/css/fontawesome/css/all.css"> -->
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/grid.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/styles.css">
+    <script>
+        window.addEventListener('load', (event) => {
+            document.querySelector('body').classList.add('loaded');
+        })
+    </script>
+</head>
+
+<body class="page-{{ page.title | slugify }}">
+
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <div class="site">
+
+        <header class="site-header">
+
+            <div class="site-branding">
+                <h1 class="site-title"><a href="{{ site.baseurl }}/">{{site.title}}!</a></h1>
+                <p>{{ site.description }}</p>
+            </div>
+
+        </header>
+
+        <main class="site-main">
+            {{content}}
+
+            <img src="{{ site.baseurl }}/images/banner_{{ page.title | slugify }}.webp" alt="banner">
+        </main>
+
+        <aside class="site-sidebar">
+            
+        </aside>
+
+        <footer class="site-footer">
+            <p>{{site.title}} &copy; All Rights Reserved {{ site.time }}</p>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>

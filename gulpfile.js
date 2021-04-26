@@ -21,12 +21,12 @@ gulp.task("sass", function() {
 	;
 });
 
-// Jekyll
+// Jekyll - development
 gulp.task("jekyll-dev", function() {
 	return cp.spawn("bundle", ["exec", "jekyll", "build --baseurl ''"], { stdio: "inherit", shell: true });
 });
 
-// Jekyll
+// Jekyll - deploying
 gulp.task("jekyll", function() {
 	return cp.spawn("bundle", ["exec", "jekyll", "build"], { stdio: "inherit", shell: true });
 });
@@ -56,8 +56,10 @@ gulp.task("watch", function() {
 });
 
 
+// for deploying the project
 gulp.task("deploy", gulp.series('jekyll', 'sass', function() {
 	return cp.spawn('git status && git commit -am "Update" && git pull && git push', { stdio: "inherit", shell: true });
 }));
 
+// for development of the project
 gulp.task("default", gulp.series('jekyll-dev', 'sass', 'watch'));

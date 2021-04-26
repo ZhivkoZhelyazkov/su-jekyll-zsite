@@ -1,4 +1,4 @@
-.nav {
+.site-nav {
     text-align: right;
     padding-top: 0.5em;
 
@@ -64,12 +64,12 @@
     }
 }
 
-.nav-toggle {
+.site-nav-toggle {
     position: absolute;
     pointer-events: none;
     opacity: 0;
 
-    &:checked + .site .site-header .nav {
+    &:checked + .site .site-header .site-nav {
         @include bp(mobile) {
             display: block;
         }

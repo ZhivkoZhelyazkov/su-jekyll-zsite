@@ -24,6 +24,12 @@ exclude:
   - vendor/gems/
   - vendor/ruby/
   - docs
+  - package.json
+  - package-lock.json
+  - gulpfile.js
+  - theme-personal
+
+
 
 # navigation:
 #   - url: /home/
