@@ -10,6 +10,24 @@
             <li
                 class="page-title-{{ current_page.title | slugify }}{% if current_page.url == page.url %} current-page {% endif %}">
                 <a href="{{ site.baseurl }}{{ current_page.url }}">{{ current_page.title }}</a>
+            
+                {% if current_page.title == 'Services' %}
+                    <ul>
+                        <li><a href="#">Service-1</a></li>
+                        <li>
+                            <a href="#">Service-2</a>
+                            <ul>
+                                <li><a href="#">SubService-1</a></li>
+                                <li><a href="#">SubService-2</a></li>
+                                <li><a href="#">SubService-3</a></li>
+                                <li><a href="#">SubService-4</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Service-3</a></li>
+                        <li><a href="#">Service-4</a></li>
+                    </ul>
+                {% endif %}
+            
             </li>
             {% endif %}
         {% endfor %}
@@ -17,29 +35,3 @@
 </nav>
 
 
-
-<!-- 
-<nav class="nav">
-    <ul>
-
-        {% assign navigation_pages = site.pages | sort:"order" %}
-
-        {% for item in site.navigation %}
-            {% if current_page.title %}
-            <li class="page-title-{{ current_page.title | slugify }}{% if current_page.url == page.url %} current-page {% endif %}">
-                <a href="{{ site.baseurl }}{{ current_page.url }}">{{ current_page.title }}</a>
-
-                {% if item.items %}
-                <ul>
-                    {% for subitem in item.items %}
-                        <li class="page-title-{{ current_page.title | slugify }}{% if current_page.url == page.url %} current-page {% endif %}">
-                            <a href="{{ site.baseurl }}{{ subitem.url }}">{{ subitem.text }}</a>
-                        </li>
-                    {% endfor %}
-                </ul>
-                {% endif %}
-            </li>
-            {% endif %}
-        {% endfor %}
-    </ul>
-</nav> -->

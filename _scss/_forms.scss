@@ -1,0 +1,65 @@
+form {
+
+    label {
+
+    }
+
+    textarea,
+    input[type="text"],
+    input[type="telt"],
+    input[type="email"],
+    input[type="password"] {
+        display: block;
+        border: 1px solid #CCC;
+        padding: 0.5em 0.8em;
+        border-radius: 0.3em;
+        outline: none;
+
+        &:focus {
+            border-color: #090;
+            & + label {
+                color: #090;
+            }
+        }
+    }
+
+    fieldset {
+        display: block;
+        width: 100%;
+        border: 1px solid #CCC;
+        padding: 2rem;
+
+        legend {
+            padding: 0 1em;
+            font-weight: bold;
+            font-size: 1.4em;
+        }
+    }
+
+    .field {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 1.5em;
+
+        label {
+            order: 1;
+            display: block;
+            padding-bottom: 0.2em;
+        }
+
+        input {
+            order: 2;
+        }
+
+        &.submit {
+            input {
+                display: block;
+                border: 1px solid #CCC;
+                background: #369;
+                color: white;
+                padding: 0.5em 0;
+                border-radius: 0.3em;
+            }
+        }
+    }
+}

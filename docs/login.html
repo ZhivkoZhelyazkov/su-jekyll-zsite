@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
         
-        About | CSS Advanced
+        Login | CSS Advanced
         
     </title>
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
@@ -19,7 +19,7 @@
     </script>
 </head>
 
-<body class="page-about">
+<body class="page-login">
 
     <input type="checkbox" id="site-nav-toggle" class="site-nav-toggle">
     <div class="site">
@@ -55,7 +55,7 @@
         
             
             <li
-                class="page-title-about current-page ">
+                class="page-title-about">
                 <a href="/about/">About</a>
             
                 
@@ -120,7 +120,7 @@
         
             
             <li
-                class="page-title-login">
+                class="page-title-login current-page ">
                 <a href="/login.html">Login</a>
             
                 
@@ -137,15 +137,15 @@
         </header>
 
         <section class="site-media"
-            style="background-image: url('https://images.unsplash.com/photo-1614102073832-030967418971?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1280&q=80');">
+            style="background-image: url('/images/banner_login.webp');">
 
             <div class="site-wrapper">
                 
-                    <h2>Learn a bit more about me.</h2>
+                    <h2>A place for login.</h2>
                 
 
                 
-                    <p>A funny statement should stay here.</p>
+                    <p></p>
                 
                 
                 
@@ -155,8 +155,39 @@
 
         <main class="site-content">
             <div class="site-wrapper">
-                
-                <!-- <img src="/images/banner_about.webp" alt="banner"> -->
+                <article class="entry">
+
+    <div class="entry-media">
+        <img src="https://images.unsplash.com/photo-1562101806-b8ebd0e33011?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80"
+            alt="" />
+    </div>
+
+    <div class="entry-content">
+        <form action="#">
+            <fieldset>
+                <legend>Login</legend>
+
+                <div class="field">
+                    <input type="text" name="username" id="username">
+                    <label for="username">Username</label>
+                </div>
+
+                <div class="field">
+                    <input type="text" name="password" id="password">
+                    <label for="password">Password</label>
+                </div>
+
+                <div class="field submit">
+                    <input type="submit" value="Login">
+                </div>
+
+            </fieldset>
+        </form>
+    </div>
+
+</article>
+
+                <!-- <img src="/images/banner_login.webp" alt="banner"> -->
             </div>
         </main>
 

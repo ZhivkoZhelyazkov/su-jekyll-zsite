@@ -1,7 +1,19 @@
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:300,300i,400,400i,500,500i,700,700i|Fira+Sans:300,300i,400,400i,500,500i,700,700i&display=swap&subset=cyrillic,cyrillic-ext,latin-ext');
 
 html {
-	font: 16px/1.5 "Fira Sans", Verdana, sans-serif;
+	font: 12px/1.5 "Fira Sans", Verdana, sans-serif;
+
+	@include bp(mobile) {
+		font-size: 14px;
+	}
+
+	@include bp(phone) {
+		font-size: 12px;
+	}
+
+	@include bp(desktop) {
+		font-size: 16px;
+	}
 }
 
 body, form, table, input, textarea, option, select, button {

@@ -1,8 +1,17 @@
-.site-header .site-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 2em 0;
+.site-header {
+    position: relative;
+    z-index: 2000;
+
+    .site-wrapper {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+
+        @include bp(desktop) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
 }
 
 .site-title {
@@ -11,7 +20,7 @@
 }
 
 .site-media {
-    height: 75vh;
+    min-height: 50vh;
     overflow: hidden;
     background-position: center;
     background-size: cover;
@@ -19,13 +28,14 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
+    padding: 2em 0;
 }
 
 .site-media:before {
     display: block;
     content: "";
-    background: rgba(19, 41, 48, 0.8);
+    background: rgba(19, 41, 48, 0.6);
     position: absolute;
     top: 0;
     left: 0;
@@ -39,7 +49,12 @@
     position: relative;
     z-index: 10;
     font-size: 1.6em;
-    padding-right: 10em;
+    padding-top: 2rem;
+    padding-bottom: 5rem;
+
+    @include bp(desktop) {
+        padding-right: 10em;
+    }
 }
 
 .site-media p,
