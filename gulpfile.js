@@ -37,7 +37,7 @@ gulp.task("watch", function() {
 		server: {
             baseDir: "./docs/"
 		},
-		host: "192.168.30.161"  // Override host detection for my PC correct IP
+		host: "192.168.0.232"  // Override host detection for my PC correct IP
 	});
 
 	gulp.watch( '_scss/**/*.scss', gulp.series('sass') );
