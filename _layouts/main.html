@@ -38,7 +38,12 @@
         </header>
 
         <section class="site-media"
-            style="background-image: url('{{ site.baseurl }}{{ page.featured_image }}');">
+
+            {% if page.featured_image_url %}
+                style="background-image: url('{{ page.featured_image_url }}');"
+            {% else %}
+                style="background-image: url('{{ site.baseurl }}{{ page.featured_image }}');"
+            {% endif %}>
 
             <div class="site-wrapper">
                 {% if page.fancy_title != '' %}
