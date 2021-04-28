@@ -14,8 +14,8 @@
             display: block;
             margin: 0 0.7em;
             position: relative;
-            transform: translate(0, -5em);
             opacity: 0;
+            transform: translate(0, -5em);
             transition: opacity 0.3s ease-in, transform 0.3s ease-in;
 
             .loaded & {
@@ -27,7 +27,7 @@
                 display: block;
             }
 
-            @for $i from 1 through 5 {
+            @for $i from 1 through 10 {
                 &:nth-child(#{$i}) {
                     transition-delay: 0.5s - ($i * 0.1s);
                 }
@@ -44,19 +44,19 @@
                 background: #369;
                 border-radius: 0.3em;
                 padding: 0.8em 0;
-    
+
                 ul {
                     top: -0.8em;
                     left: 100%;
                 }
-    
+
                 a {
                     color: white;
                 }
-    
+
                 li:hover > a,
                 a:hover {
-                    background: #FFF;
+                    background: #fff;
                     color: #369;
                 }
             }
@@ -85,7 +85,7 @@
         background: #369;
         color: #fff;
     }
- 
+
     // li.page-title-about a:before {
     //     content: "\f47f";
     // }

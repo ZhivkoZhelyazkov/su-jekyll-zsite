@@ -10,7 +10,7 @@ $grid-columns: 12;
 
     &-header {
         grid-column: 1 / -1;  // take the whole row
-        background: #369;
+        background: rgb(102, 138, 173);
     }
 
         &-main {
